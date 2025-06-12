@@ -42,10 +42,20 @@ body {
     animation: fadeInDown 0.8s ease-out;
 }
 
-.brain-icon {
-    font-size: 4rem;
+.logo-container {
     margin-bottom: 1rem;
-    animation: bounce 2s infinite;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .title {

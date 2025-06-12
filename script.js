@@ -144,12 +144,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add interactive brain icon animation
-    const brainIcon = document.querySelector('.brain-icon');
-    brainIcon.addEventListener('click', function() {
+    // Add interactive logo animation
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('click', function() {
         this.style.animation = 'none';
         setTimeout(() => {
-            this.style.animation = 'bounce 2s infinite';
+            this.style.animation = '';
+            this.parentElement.style.animation = 'float 3s ease-in-out infinite';
         }, 10);
     });
     
