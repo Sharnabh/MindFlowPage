@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 MindFlow – The Mac-First Flowchart App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="brain-icon">🧠</div>
+            <h1 class="title">MindFlow</h1>
+            <p class="subtitle">The Mac-First Flowchart App (Early Access)</p>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Reimagining flowcharts and mind maps for speed, clarity, and AI-assisted creativity.</h2>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="scrollToForm()">
+                        <i class="fas fa-rocket"></i>
+                        Share Your Thoughts
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToFeatures()">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="section why-section" id="features">
+            <div class="section-header">
+                <h3 class="section-title">👋 Why I'm Building This</h3>
+            </div>
+            <div class="content-card">
+                <p class="description">
+                    Flowcharting tools today feel like bloated web apps or overcomplicated whiteboards. 
+                    I wanted something fast, native, and designed for thinkers — especially Mac users who value polish and precision.
+                </p>
+                <p class="description">
+                    So I'm building <strong>MindFlow</strong>, a Mac-first flowchart and mind mapping app with:
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧭</div>
+                <h4>Voice-to-Diagram</h4>
+                <p>powered by Whisper</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h4>AI-Assisted Flows</h4>
+                <p>with Gemini/GPT</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡️</div>
+                <h4>Lightning-fast Canvas</h4>
+                <p>keyboard shortcuts, offline use</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h4>Native Mac Experience</h4>
+                <p>no Electron, no lag</p>
+            </div>
+        </section>
+
+        <!-- Testing Section -->
+        <section class="section testing-section">
+            <div class="section-header">
+                <h3 class="section-title">🛠️ What I'm Testing Right Now</h3>
+            </div>
+            <div class="content-card">
+                <p class="description">Before I go heads-down into building, I want to hear from you:</p>
+                <ul class="question-list">
+                    <li>What frustrates you about tools like Lucidchart, Miro, or Whimsical?</li>
+                    <li>What's the #1 feature you wish existed in a diagramming tool?</li>
+                    <li>Would you use something like this — or pay for it?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="section audience-section">
+            <div class="section-header">
+                <h3 class="section-title">📣 Help Me Build Something Worth Using</h3>
+            </div>
+            <div class="content-card">
+                <p class="description">If you're a:</p>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-icon">💼</div>
+                        <p>Freelancer or team lead building workflows</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🎓</div>
+                        <p>Student planning assignments or systems</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🧠</div>
+                        <p>Productivity nerd mapping ideas</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🧑‍💻</div>
+                        <p>Dev or founder designing flows</p>
+                    </div>
+                </div>
+                <p class="description"><strong>...I want to hear your voice before writing more code.</strong></p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="form">
+            <div class="cta-content">
+                <h3 class="cta-title">📝 Share Your Thoughts (2 mins Max)</h3>
+                <p class="cta-description">👉 Fill the 6-question feedback form<br>(no signup needed — just honesty)</p>
+                
+                <form class="feedback-form" id="feedbackForm" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true">
+                    <!-- Hidden field for spam protection -->
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="currentTool">What current tool do you use for flowcharts or diagramming?</label>
+                        <textarea id="currentTool" name="currentTool" placeholder="e.g., Lucidchart, Miro, Whimsical, Draw.io, pen & paper, etc." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="frequency">How often do you create diagrams or mind maps?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="frequency" value="daily" required>
+                                <span>Daily</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="frequency" value="weekly" required>
+                                <span>Weekly</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="frequency" value="monthly" required>
+                                <span>Monthly</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="frequency" value="rarely" required>
+                                <span>Rarely</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="frustrations">What frustrates you most about your current tool?</label>
+                        <textarea id="frustrations" name="frustrations" placeholder="Tell me about your biggest pain points - performance, interface, features, etc." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="wishFeature">What's the one feature you wish it had?</label>
+                        <textarea id="wishFeature" name="wishFeature" placeholder="Describe the feature that would make your diagramming workflow perfect" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="aiFeatures">Would voice-to-diagram or AI‑powered suggestions be helpful?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="aiFeatures" value="yes" required>
+                                <span>Yes — please explain</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="aiFeatures" value="no" required>
+                                <span>No — please explain</span>
+                            </label>
+                        </div>
+                        <textarea id="aiExplanation" name="aiExplanation" placeholder="Please explain your choice..." style="margin-top: 0.5rem; display: none;"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payWillingness">Would you be willing to pay (e.g. $5–10/month) for a better Mac-native tool?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="payWillingness" value="yes" required>
+                                <span>Yes</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="payWillingness" value="maybe" required>
+                                <span>Maybe</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="payWillingness" value="no" required>
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="early-access-section">
+                        <h4>✅ Get Early Access</h4>
+                        <p>Email (optional) – to join early access list:</p>
+                        <input type="email" id="email" name="email" placeholder="your@email.com (optional)">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Feedback
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <h4>🙏 Thanks for Being Part of This</h4>
+                <p>This will only be great if it's shaped by people who actually need it. I'm listening — and building in public.</p>
+                <p class="tagline"><strong>Let's rethink how ideas flow.</strong></p>
+                
+                <div class="author">
+                    <p>- Sharnabh Banerjee</p>
+                    <p class="author-tags">🛠 indie dev | ✍️ building in public</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
