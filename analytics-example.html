@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow Analytics Dashboard</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9fafb;
+            margin: 0;
+            padding: 2rem;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #6366f1;
+        }
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .insights {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .insight-item {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #f3f4f6;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <img src="logo.svg" alt="MindFlow Logo" style="width: 80px; height: 80px;">
+            </div>
+            <h1>MindFlow Analytics Dashboard</h1>
+            <p>Track user feedback and validate your product ideas</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">156</div>
+                <div class="stat-label">Total Responses</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">68%</div>
+                <div class="stat-label">Willing to Pay</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Early Access Signups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.2</div>
+                <div class="stat-label">Avg. Completion Time (min)</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>📊 Key Insights</h3>
+            <div class="insights">
+                <div class="insight-item">
+                    <strong>Top Frustration:</strong> "Current tools are too slow and laggy" (mentioned 34 times)
+                </div>
+                <div class="insight-item">
+                    <strong>Most Wanted Feature:</strong> "Voice-to-diagram functionality" (mentioned 28 times)
+                </div>
+                <div class="insight-item">
+                    <strong>Usage Frequency:</strong> 45% use diagramming tools weekly or more
+                </div>
+                <div class="insight-item">
+                    <strong>AI Features:</strong> 72% interested in AI-powered suggestions
+                </div>
+                <div class="insight-item">
+                    <strong>Current Tools:</strong> Lucidchart (32%), Miro (28%), Draw.io (18%), Other (22%)
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>📈 What This Data Tells You</h3>
+            <ul style="line-height: 1.8;">
+                <li><strong>Strong market validation:</strong> 68% willing to pay shows real demand</li>
+                <li><strong>Clear pain point:</strong> Performance issues with current tools</li>
+                <li><strong>Differentiator validated:</strong> Voice-to-diagram is highly desired</li>
+                <li><strong>AI opportunity:</strong> Most users want AI-powered features</li>
+                <li><strong>Target audience confirmed:</strong> Regular users who value efficiency</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -45,13 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.classList.add('loading');
         submitBtn.innerHTML = '<i class="fas fa-spinner"></i> Sending...';
         
-        // For Netlify Forms - use fetch API for better UX
+        // For Netlify Forms - encode form data properly
         const formData = new FormData(form);
         
         fetch('/', {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
+            body: encode({
+                "form-name": "feedback",
+                ...Object.fromEntries(formData)
+            })
         })
         .then(response => {
             if (response.ok) {
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 form.reset();
                 updateProgress(); // Reset progress bar
             } else {
-                showErrorMessage();
+                throw new Error('Form submission failed');
             }
         })
         .catch(error => {
@@ -71,6 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Feedback';
         });
     });
+    
+    // Helper function to encode form data for Netlify
+    function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
     
     function showSuccessMessage() {
         // Create success notification

@@ -126,11 +126,14 @@
                 <h3 class="cta-title">📝 Share Your Thoughts (2 mins Max)</h3>
                 <p class="cta-description">👉 Fill the 6-question feedback form<br>(no signup needed — just honesty)</p>
                 
-                <form class="feedback-form" id="feedbackForm" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true">
+                <form class="feedback-form" id="feedbackForm" name="feedback" method="POST" action="/thank-you.html" netlify netlify-honeypot="bot-field" data-netlify="true">
                     <!-- Hidden field for spam protection -->
                     <p style="display: none;">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                     </p>
+                    
+                    <!-- Hidden field for Netlify form identification -->
+                    <input type="hidden" name="form-name" value="feedback" />
                     
                     <div class="form-group">
                         <label for="currentTool">What current tool do you use for flowcharts or diagramming?</label>
